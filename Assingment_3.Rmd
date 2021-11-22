@@ -1,0 +1,71 @@
+---
+title: "Assignment 3: Data Visualization (Incarceration)"
+output: html_document
+---
+
+```{r setup, include=FALSE, warning=FALSE, echo=FALSE}
+ source("A3.R")
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Samantha Garcia Perez 
+
+
+## Introduction 
+
+In the United States, there are noted  incarceration inequalities are people of color are grossly over represented. This is due to Structural racism being deeply embedded within the criminal justice system. In previous [data](https://www.pewresearch.org/fact-tank/2020/06/03/10-things-we-know-about-race-and-policing-in-the-u-s/), hyper policing in non-white communities has noted that Black adults are about five times are likely as whites to say they've been unfairly stopped by police. Additionally, [the war on drugs](https://drugpolicy.org/issues/race-and-drug-war) causes communities of color to bear the weight of the discriminatory enforcement of drug laws. These discriminatory laws manifest
+in drug-related higher arrest and incarceration rates for these communities which don't reflect higher usage but instead, hyper policing. The data from this assignment comes from the Vera Institute, who worked with the Bureau of Justice Statistics data collections and the Census of Jails to gather information about incarceration trends in the United States. 
+
+## Summary Information 
+
+- **How many total years are in the data set?**
+This data comprises of 48 years between 1970 and 2018. 
+
+- **How many states are accounted for?**
+There are 51 unique states in the data set. 
+
+- **What is the total jail population difference between 1970 and 2018?**
+Between the 48 years, the total jail population has increased population of 576,339 people. 
+
+- **What is the total overall U.S population difference between 1970 and 2018?**
+Between the 48 years, the total U.S population has increased by 123,285,171 people according to the datset. 
+
+- **Is there an increase of decrease of non-white residents making up this population**
+There is an increase of non-white (Black, Latinx, AAPI, Native) residents by 45,028,285 between the 48 years.  
+
+
+## Trends over time chart
+
+The graph below shows the United State's Jail Admission trends of the top 5 most populated states (Arizona, California, Illinois, New York, Texas). The visual is intended to obtain a foundation view of overall U.S incarceration trends. By choosing the top 5 most populated states, we are able to quickly compare and contrast to recognize trends. In particular we can see that Texas and California started off in the late 1970s with a higher jail admission rate which increased over the 20 year period until the 2000s where the rate can be seen decreasing. In contrast, Illinois, New York,and Arizona show lower Jail admissions that slightly increased in the 30 year period from 1980s to the 2010s. However, all states showed a higher jail admissions rate in 2018 compared to 1970s. 
+
+```{r, warning=FALSE, echo=FALSE}
+
+print(graph1)
+```
+
+
+## Variable comparison chart
+
+The graph below shows the comparison of U.S Prison Population by Racial/Ethnic Groups from 1984 to 2018. Although the data set starts at 1970, there was not racial population data available until 1984 which narrows this time frame down from 48 years to 34 years.Despite this time discrepancy, the visual shows that over the 34 years, we saw a shocking increase of Latinx and Black prison population compared to other racial groups (Native, AAPI, Other). 
+
+```{r, warning=FALSE, echo=FALSE}
+
+print(graph2)
+```
+
+
+
+ 
+
+## Map
+
+The map below represents the comparison of the Black and Latinx Inmate population to the White Inmate population in 2018. The higher the ratio (states in bright blue), the larger the difference in inmate populations. We can see that states like California, Texas, Illinois, and New Jersey have a high ratio of black and latinx inmates to white inmates. I chose to combine these specific racial group for this ratio as [previous data](https://link.springer.com/chapter/10.1057/9780230607347_2) has found evidence of hypercriminalization of Black and Latinx Americans. This map shows that there is some evidence of differences in 2018.
+
+
+```{r, warning=FALSE, echo=FALSE, fig.width=12, fig.height=6, dev.args=list(pointsize=18)}
+
+print(ratio_map)
+```
+
+
+
